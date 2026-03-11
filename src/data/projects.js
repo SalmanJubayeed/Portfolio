@@ -6,7 +6,7 @@ export const projects = [
     tech: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     github: "https://github.com/SalmanJubayeed/GoSmartCity",
     live: "https://gosmartcity.42web.io/",
-    image: "/src/assets/images/gosmartcity.png"
+    image: "/src/public/images/gosmartcity.png"
   },
   {
     title: "BloodBank",
@@ -15,7 +15,7 @@ export const projects = [
     tech: ["PHP", "MySQL", "HTML", "CSS"],
     github: "https://github.com/SalmanJubayeed/BloodBank",
     live: "https://dms-bloodbank.42web.io/",
-    image: "/src/assets/images/bloodbank.png"
+    image: "/src/public/images/bloodbank.png"
   },
   {
     title: "CodeBrewCafe",
@@ -24,7 +24,7 @@ export const projects = [
     tech: ["Java", "File Management"],
     github: "https://github.com/SalmanJubayeed/CodeBrewCafe",
     live: "",
-    image: "/src/assets/images/codebrewcafe.png"
+    image: "/src/public/images/codebrewcafe.png"
   },
   {
     title: "RedStream",
@@ -33,6 +33,6 @@ export const projects = [
     tech: ["Kotlin", "Firebase"],
     github: "https://github.com/SalmanJubayeed/RedStream",
     live: "",
-    image: "/src/assets/images/redstream.png"
+    image: "/src/public/images/redstream.png"
   }
 ];
