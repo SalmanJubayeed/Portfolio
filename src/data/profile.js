@@ -3,7 +3,7 @@ export const profile = {
   title: "CSE Student | Software Developer",
   bio: "Computer Science student passionate about building web and mobile applications and solving real-world problems.",
 
-  email: "jubayeed10@gmail.com",
+  email: "salman.jubayeed@gmail.com",
 
   github: "https://github.com/SalmanJubayeed",
   linkedin: "https://www.linkedin.com/in/Salman-Jubayeed/",
