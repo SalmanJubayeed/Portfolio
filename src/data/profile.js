@@ -4,6 +4,9 @@ export const profile = {
   bio: "Computer Science student passionate about building web and mobile applications and solving real-world problems.",
 
   email: "salman.jubayeed@gmail.com",
+  whatsapp: "https://wa.me/8801540336996",
+  whatsappNumber: "01540336996",
+  resumeUrl: "/Salman_Jubayeed_CV.pdf",
 
   github: "https://github.com/SalmanJubayeed",
   linkedin: "https://www.linkedin.com/in/Salman-Jubayeed/",

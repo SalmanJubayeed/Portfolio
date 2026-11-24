@@ -10,10 +10,19 @@ import {
   FaDatabase,
   FaJava,
   FaAndroid,
-  FaFileAlt
+  FaFileAlt,
+  FaNetworkWired,
+  FaPython,
+  FaBrain,
+  FaRobot
 } from "react-icons/fa";
 
-import { SiKotlin, SiFirebase } from "react-icons/si";
+import { SiKotlin, SiFirebase, SiDotnet, SiCisco } from "react-icons/si";
+import {
+  TbBrandCSharp,
+  TbBrandVscode,
+  TbBrandVisualStudio
+} from "react-icons/tb";
 
 const techIcons = {
   HTML: { icon: FaHtml5, color: "text-orange-500" },
@@ -28,6 +37,24 @@ const techIcons = {
 
   Kotlin: { icon: SiKotlin, color: "text-purple-400" },
   Firebase: { icon: SiFirebase, color: "text-yellow-400" },
+
+  Python: { icon: FaPython, color: "text-yellow-400" },
+  "Artificial Intelligence": { icon: FaBrain, color: "text-pink-400" },
+  AI: { icon: FaBrain, color: "text-pink-400" },
+  "Minimax Algorithm": { icon: FaRobot, color: "text-purple-400" },
+
+  "C#": { icon: TbBrandCSharp, color: "text-purple-400" },
+  "ASP.NET": { icon: SiDotnet, color: "text-indigo-400" },
+  ".NET": { icon: SiDotnet, color: "text-indigo-400" },
+  "VS Code": { icon: TbBrandVscode, color: "text-sky-400" },
+  "Visual Studio Code": { icon: TbBrandVscode, color: "text-sky-400" },
+  "Visual Studio": { icon: TbBrandVisualStudio, color: "text-purple-400" },
+  "Microsoft Visual Studio": { icon: TbBrandVisualStudio, color: "text-purple-400" },
+
+  "Computer Networking": { icon: FaNetworkWired, color: "text-emerald-400" },
+  "Networking": { icon: FaNetworkWired, color: "text-emerald-400" },
+  "Cisco Packet Tracer": { icon: SiCisco, color: "text-sky-400" },
+  "Cisco": { icon: SiCisco, color: "text-sky-400" },
 
   "File Management": { icon: FaFileAlt, color: "text-slate-300" }
 };
@@ -53,11 +80,11 @@ export default function ProjectCard({ project }) {
     >
 
       {/* Image */}
-      <div className="h-40 flex items-center justify-center mb-5">
+      <div className="h-40 flex items-center justify-center mb-5 overflow-hidden rounded-lg">
         <img
           src={project.image}
           alt={project.title}
-          className="max-h-full object-contain opacity-90"
+          className="max-h-full max-w-full object-contain opacity-90 hover:scale-105 transition duration-300"
         />
       </div>
 
@@ -73,29 +100,29 @@ export default function ProjectCard({ project }) {
 
       {/* Tech Stack */}
       <div className="flex flex-wrap justify-center gap-2 mt-5">
-{project.tech.map((tech) => {
-  const TechIcon = techIcons[tech]?.icon;
-  const color = techIcons[tech]?.color || "text-sky-300";
+        {project.tech.map((tech) => {
+          const TechIcon = techIcons[tech]?.icon;
+          const color = techIcons[tech]?.color || "text-sky-300";
 
-  return (
-    <div
-      key={tech}
-      className="
-      flex items-center gap-2
-      px-3 py-1
-      rounded-full
+          return (
+            <div
+              key={tech}
+              className="
+              flex items-center gap-2
+              px-3 py-1
+              rounded-full
 
-      bg-white/5
-      border border-white/10
-      backdrop-blur-md
-      text-xs text-slate-200
-      "
-    >
-      {TechIcon && <TechIcon className={`${color} text-sm`} />}
-      {tech}
-    </div>
-  );
-})}
+              bg-white/5
+              border border-white/10
+              backdrop-blur-md
+              text-xs text-slate-200
+              "
+            >
+              {TechIcon && <TechIcon className={`${color} text-sm`} />}
+              {tech}
+            </div>
+          );
+        })}
       </div>
 
       {/* Links */}

@@ -1,23 +1,9 @@
-import { useState } from "react";
 import Reveal from "./Reveal";
 import { profile } from "../data/profile";
 import { SiGmail } from "react-icons/si";
-import { FaCheck } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
-  const [copied, setCopied] = useState(false);
-  const [hover, setHover] = useState(false);
-
-  const copyEmail = async () => {
-    await navigator.clipboard.writeText(profile.email);
-
-    setCopied(true);
-
-    setTimeout(() => {
-      setCopied(false);
-    }, 2000);
-  };
-
   return (
     <section
       id="contact"
@@ -27,7 +13,7 @@ export default function Contact() {
         <div
           className="
           max-w-xl w-full
-          p-10
+          p-8 md:p-12
           rounded-2xl
           bg-white/5
           backdrop-blur-xl
@@ -38,61 +24,75 @@ export default function Contact() {
           transition-all duration-300
           "
         >
- <div className="text-center mb-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold">
+              Contact
+            </h2>
 
-  <h2 className="text-3xl font-bold">
-    Contact
-  </h2>
+            <div
+              className="
+              h-[2px] w-20 mx-auto mt-3
+              bg-gradient-to-r
+              from-transparent
+              via-sky-400
+              to-transparent
+              animate-pulse
+              "
+            />
+          </div>
 
-  <div
-    className="
-    h-[2px] w-20 mx-auto mt-3
-    bg-gradient-to-r
-    from-transparent
-    via-sky-400
-    to-transparent
-    animate-pulse
-    "
-  />
-
-</div>
-
-          <p className="text-slate-300 mb-8">
-            Feel free to reach out for collaboration or project discussion.
+          <p className="text-slate-300 mb-8 leading-relaxed max-w-md mx-auto text-sm md:text-base">
+            Feel free to reach out directly via Email or WhatsApp for project discussions, collaborations, or opportunities.
           </p>
 
-          <button
-            onClick={copyEmail}
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-            className={`
-            flex items-center justify-center gap-3
-            mx-auto
-            px-6 py-3
-            rounded-xl
-            border
-            backdrop-blur-md
-            transition-all duration-300
+          {/* Square Icon Buttons with text hidden */}
+          <div className="flex items-center justify-center gap-6">
+            {/* Square Email Button */}
+            <a
+              href={`mailto:${profile.email}`}
+              title={`Send Email to ${profile.email}`}
+              aria-label="Send Email"
+              className="
+              group
+              w-16 h-16
+              rounded-2xl
+              flex items-center justify-center
+              bg-white/5
+              border border-white/10
+              backdrop-blur-md
+              hover:border-red-400/50 hover:bg-red-500/10
+              hover:shadow-[0_0_25px_rgba(248,113,113,0.3)]
+              hover:scale-110 active:scale-95
+              transition-all duration-300
+              "
+            >
+              <SiGmail className="text-2xl text-red-400 group-hover:scale-110 transition-transform" />
+            </a>
 
-            ${
-              copied
-                ? "bg-emerald-500/20 border-emerald-400/40 text-emerald-300"
-                : "bg-white/5 border-white/10 text-slate-200 hover:border-sky-400/40 hover:shadow-[0_0_20px_rgba(56,189,248,0.25)]"
-            }
-            `}
-          >
-            {copied ? (
-              <>
-                <FaCheck />
-                Email Copied
-              </>
-            ) : (
-              <>
-                <SiGmail className="text-red-400 text-xl" />
-                {hover ? "Click to copy email" : profile.email}
-              </>
-            )}
-          </button>
+            {/* Square WhatsApp Button */}
+            <a
+              href={profile.whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              title="Chat on WhatsApp"
+              aria-label="Chat on WhatsApp"
+              className="
+              group
+              w-16 h-16
+              rounded-2xl
+              flex items-center justify-center
+              bg-white/5
+              border border-white/10
+              backdrop-blur-md
+              hover:border-emerald-400/50 hover:bg-emerald-500/10
+              hover:shadow-[0_0_25px_rgba(52,211,153,0.3)]
+              hover:scale-110 active:scale-95
+              transition-all duration-300
+              "
+            >
+              <FaWhatsapp className="text-2xl text-emerald-400 group-hover:scale-110 transition-transform" />
+            </a>
+          </div>
         </div>
       </Reveal>
     </section>
