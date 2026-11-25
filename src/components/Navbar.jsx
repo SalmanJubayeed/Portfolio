@@ -34,11 +34,13 @@ export default function Navbar() {
         w-full max-w-5xl
         px-6 py-3.5
         rounded-2xl
+        bg-white/5
         backdrop-blur-xl
-        bg-slate-900/80
         border border-white/10
         flex justify-between items-center
-        shadow-xl shadow-black/40
+        shadow-lg
+        hover:border-sky-400/30
+        transition-all duration-300
         "
       >
         {/* Brand Name */}
@@ -79,7 +81,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile & Tablet Dropdown Menu */}
+        {/* Mobile & Tablet Dropdown Menu matching card transparent look */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -90,9 +92,9 @@ export default function Navbar() {
               className="
                 absolute top-full left-0 right-0 mt-3
                 p-4 rounded-2xl
-                bg-slate-900/95 backdrop-blur-2xl
+                bg-white/10 backdrop-blur-2xl
                 border border-white/15
-                shadow-2xl shadow-black/80
+                shadow-2xl shadow-black/50
                 flex flex-col space-y-1.5
                 lg:hidden
               "
