@@ -17,5 +17,5 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/Salman-Jubayeed/",
   facebook: "https://www.facebook.com/salman.jubayeed/",
   instagram: "https://www.instagram.com/salman_jubayeed/",
-  youtube: "https://www.youtube.com/@salmanjubayeed3182"
+  youtube: "https://www.youtube.com/@salmanjubayeed"
 };
