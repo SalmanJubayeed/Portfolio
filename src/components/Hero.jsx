@@ -6,8 +6,7 @@ import {
   FaLinkedin,
   FaYoutube,
   FaGithub,
-  FaWhatsapp,
-  FaDownload
+  FaWhatsapp
 } from "react-icons/fa";
 
 export default function Hero() {
@@ -75,34 +74,21 @@ export default function Hero() {
         {profile.bio}
       </motion.p>
 
-      {/* Call to Actions: Download CV & Contact */}
+      {/* Call to Action: Contact */}
       <motion.div
-        className="mt-8 flex justify-center items-center gap-4 flex-wrap"
+        className="mt-8 flex justify-center items-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.4 }}
       >
         <a
-          href={profile.resumeUrl || "/Salman_Jubayeed_CV.pdf"}
-          download="Salman_Jubayeed_CV.pdf"
-          className="
-            inline-flex items-center gap-2 px-6 py-3 rounded-xl
-            bg-sky-500/20 border border-sky-400/40 text-sky-300
-            hover:bg-sky-500/30 hover:border-sky-300 hover:shadow-[0_0_25px_rgba(56,189,248,0.35)]
-            hover:scale-105 active:scale-95 transition-all duration-300 font-medium text-sm
-          "
-        >
-          <FaDownload className="text-sm" />
-          <span>Download CV</span>
-        </a>
-
-        <a
           href="#contact"
           className="
-            inline-flex items-center gap-2 px-6 py-3 rounded-xl
+            inline-flex items-center gap-2 px-8 py-3 rounded-xl
             bg-white/5 border border-white/10 text-slate-200
-            hover:bg-white/10 hover:border-sky-400/40 hover:text-white
+            hover:bg-sky-500/10 hover:border-sky-400/40 hover:text-white
             hover:scale-105 active:scale-95 transition-all duration-300 font-medium text-sm
+            shadow-lg
           "
         >
           <span>Contact Me</span>

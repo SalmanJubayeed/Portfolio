@@ -2,6 +2,7 @@ import Reveal from "./Reveal";
 import { profile } from "../data/profile";
 import { SiGmail } from "react-icons/si";
 import { FaWhatsapp } from "react-icons/fa";
+import { TbFileCv } from "react-icons/tb";
 
 export default function Contact() {
   return (
@@ -42,10 +43,10 @@ export default function Contact() {
           </div>
 
           <p className="text-slate-300 mb-8 leading-relaxed max-w-md mx-auto text-sm md:text-base">
-            Feel free to reach out directly via Email or WhatsApp for project discussions, collaborations, or opportunities.
+            Feel free to reach out directly via Email, WhatsApp, or download my CV below for project discussions, collaborations, or opportunities.
           </p>
 
-          {/* Square Icon Buttons with text hidden */}
+          {/* Square Icon Buttons with text hidden: Email, WhatsApp, Download CV */}
           <div className="flex items-center justify-center gap-6">
             {/* Square Email Button */}
             <a
@@ -91,6 +92,29 @@ export default function Contact() {
               "
             >
               <FaWhatsapp className="text-2xl text-emerald-400 group-hover:scale-110 transition-transform" />
+            </a>
+
+            {/* Square CV Download Button */}
+            <a
+              href={profile.resumeUrl || "/Saman_J_Jubayeed_CV.pdf"}
+              download={profile.resumeUrl ? profile.resumeUrl.replace(/^\//, '') : "Saman_J_Jubayeed_CV.pdf"}
+              title="Download CV"
+              aria-label="Download CV"
+              className="
+              group
+              w-16 h-16
+              rounded-2xl
+              flex items-center justify-center
+              bg-white/5
+              border border-white/10
+              backdrop-blur-md
+              hover:border-sky-400/50 hover:bg-sky-500/10
+              hover:shadow-[0_0_25px_rgba(56,189,248,0.3)]
+              hover:scale-110 active:scale-95
+              transition-all duration-300
+              "
+            >
+              <TbFileCv className="text-3xl text-sky-400 group-hover:scale-110 transition-transform" />
             </a>
           </div>
         </div>

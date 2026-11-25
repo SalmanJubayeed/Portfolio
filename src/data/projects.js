@@ -6,7 +6,7 @@ export const projects = [
     tech: ["C#", "ASP.NET", "VS Code"],
     github: "https://github.com/SalmanJubayeed/Campus-Facility-Analytics",
     live: "",
-    image: "/images/campusfacility.svg"
+    image: "/images/smartcampusfacility.jpeg"
   },
   {
     title: "AI Tic Tac Toe",
@@ -15,7 +15,7 @@ export const projects = [
     tech: ["Python", "Artificial Intelligence", "Minimax Algorithm"],
     github: "https://github.com/SalmanJubayeed/Tic_Tac_Toe_AIL",
     live: "",
-    image: "/images/tictactoe.svg"
+    image: "/images/tictactoe.png"
   },
   {
     title: "IT Sector Management",
@@ -24,7 +24,7 @@ export const projects = [
     tech: ["Computer Networking", "Cisco Packet Tracer"],
     github: "https://github.com/SalmanJubayeed/IT-Sector-Management",
     live: "",
-    image: "/images/itsectormanagement.svg"
+    image: "/images/itsector.png"
   },
   {
     title: "GoSmartCity",

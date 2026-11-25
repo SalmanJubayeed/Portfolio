@@ -26,12 +26,16 @@ export default function About() {
         </div>
       </Reveal>
 
-      {/* Paragraph animated on scroll / initial load with Reveal */}
-      <Reveal delay={0.15}>
-        <p className="max-w-2xl mx-auto text-slate-300 leading-relaxed text-base md:text-lg">
-          {profile.bio}
-        </p>
-      </Reveal>
+      {/* Paragraphs with high readability and Reveal animation */}
+      <div className="max-w-3xl mx-auto space-y-6 text-left">
+        {profile.about.map((paragraph, index) => (
+          <Reveal key={index} delay={0.15 + index * 0.1}>
+            <p className="text-slate-300 leading-relaxed text-base md:text-lg">
+              {paragraph}
+            </p>
+          </Reveal>
+        ))}
+      </div>
     </section>
   );
 }
